@@ -1215,6 +1215,200 @@
  <!-- Main JS -->
  <script src="/assets/JS/main.js"></script>
 
+ <script>
+   let heroButton = document.querySelector(".hero_button1");
+let heroImageArea = document.querySelector(".hero_img_area");
+let heroImage1 = document.querySelector(".hero_img1");
+let heroImage2 = document.querySelector(".hero_img2");
+let heroImage3 = document.querySelector(".hero_img3");
+
+heroButton.addEventListener("click",(e)=>{
+  heroImageArea.classList.toggle("changeImageActive");
+
+})
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+// Hero Section
+gsap.timeline({
+  scrollTrigger:{
+    trigger:".hero_wrapper",
+    toggleActions:"restart reverse none none",
+    scrub:true,
+
+  }
+})
+.from(".hero_img1",{duration:5,x:innerWidth+1 , ease:
+"power2",delay:0.5   })
+.to(".hero_img1",{duration:5,x:innerWidth+1,ease:
+  "linear" , delay:0.5    });
+
+
+gsap.timeline({
+  scrollTrigger:{
+    trigger:".hero_wrapper",
+    toggleActions:"restart reverse none none",
+    scrub:true,
+    transformOrigin: "left top"
+
+  }
+})
+.from(".hero_img2",{duration:4,x:innerWidth+1 , ease:
+"power2",   })
+.to(".hero_img2",{duration:4,x:innerWidth+1,ease:
+  "linear" ,     });
+
+gsap.timeline({
+  scrollTrigger:{
+    trigger:".hero_wrapper",
+    toggleActions:"restart reverse none none",
+    scrub:true,
+    transformOrigin: "left top"
+
+  }
+})
+.from(".hero_img3",{duration:4,x:innerWidth+1 , ease:
+"power2",   })
+.to(".hero_img3",{duration:4,x:innerWidth+1,ease:
+  "linear" ,     });
+
+  // Home Step Section
+  gsap.timeline({
+    scrollTrigger:{
+      trigger:".home_step_row1   ",
+      toggleActions:"restart reverse none none",
+      scrub:true,
+
+    }
+  })
+  .from(".tilte",{duration:2,x:20,opacity:0   })
+  .from(".step_img",{duration:2,x:innerWidth * -1   });
+
+  gsap.timeline({
+    scrollTrigger:{
+      trigger:".home_step_row1",
+      toggleActions:"restart reverse none none",
+      scrub:true,
+
+    }
+  })
+  .from(".title_paragraph",{duration:2,y:50,opacity:0   });
+
+  gsap.timeline({
+    scrollTrigger:{
+      trigger:".screen_wrapper",
+      toggleActions:"restart reverse none none",
+      scrub:true,
+
+      start:"top 100%",
+
+      // end:"+=100%",
+
+    }
+  })
+  .from(".step_list1",{duration:2,y:50,opacity:0  })
+  .from(".step_list2",{duration:2,y:50,opacity:0  })
+  .from(".step_list3",{duration:2,y:50,opacity:0  })
+  // .to(".stet_list1",{duration:2,x:innerWidth+1,opacity:1  })
+
+
+
+  // Features Section
+
+  gsap.timeline({
+    scrollTrigger:{
+      trigger:".feature_row  ",
+      toggleActions:"restart reverse none none",
+      scrub:true,
+
+    }
+  })
+  .from(".features_title",{duration:2,x:20,opacity:0   })
+
+  gsap.timeline({
+    scrollTrigger:{
+      trigger:".feature_row",
+      toggleActions:"restart reverse none none",
+      scrub:true,
+
+    }
+  })
+  .from(".features_paragraph",{duration:2,y:50,opacity:0   });
+
+
+  gsap.timeline({
+    scrollTrigger:{
+      trigger:".fitems_row",
+      toggleActions:"restart reverse none none",
+      scrub:true,
+      pin:true,
+
+    }
+  })
+  // .from(".fitems1",{duration:2,y:50,opacity:0  })
+  // .from(".fitems2",{duration:2,y:50,opacity:0  })
+  // .from(".fitems3",{duration:2,y:50,opacity:0  })
+  // .from(".fitems4",{duration:2,y:50,opacity:0  })
+  // .from(".fitems5",{duration:2,y:50,opacity:0  })
+  .from(".features_iteam_area",{duration:1,y:50,opacity:0,stagger:0.8, ease:"linear"    });
+
+  // Video Features Section
+  // gsap.timeline({
+  //   scrollTrigger:{
+  //     trigger:".video_features_wrapper",
+  //     toggleActions:"restart reverse none none",
+  //     scrub:true,
+  //     // start:"top 80%",
+  //     // pin:true,
+  //     markers:true,
+
+  //   }
+  // })
+  // .from(".video_features_wrapper",{duration:2,x:"center",width:500,height:500 ,stagger:0.8, ease:"linear"    });
+
+  // Expertise Section
+
+  gsap.timeline({
+    scrollTrigger:{
+      trigger:".expertise_wrapper",
+      toggleActions:"restart reverse none none",
+      scrub:true,
+      pin:true,
+
+    }
+  })
+
+  .from(".expertise_service_iteam",{duration:2,y:70,opacity:0,stagger:0.8, ease:"linear"    });
+
+  // Perfect Solution
+
+
+  gsap.timeline({
+    scrollTrigger:{
+      trigger:".solution_section",
+      toggleActions:"restart reverse none none",
+      scrub:true,
+      pin:true,
+
+    }
+  })
+
+  .from(".solution_service_iteam",{duration:2,x:50,opacity:0,stagger:0.8, ease:"linear"    })
+  .from(".soluation_title",{
+    duration:2,scale:0 , stagger:0.8
+  });
+
+
+
+
+
+
+ </script>
+
 </body>
 
 </html>
