@@ -842,6 +842,41 @@ button:hover {
   visibility: visible;
 }
 
+.hero_button1 {
+  width: 5rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -2rem;
+  background-color: #567df4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+.hero_button1 div {
+  width: 2.5rem;
+  height: 1.8rem;
+  background-color: #ffffff;
+}
+
+.toggleSwitchActive .hero_button1 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 /* =============  Archive Section  ============= */
 .archive_section {
   background-image: url("assets/Images/office-583841_1920.jpg");

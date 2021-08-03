@@ -132,7 +132,17 @@
       <div class="container hero_container">
         <div class="row">
           <div class="col-12  text-center">
-            <button class="btn btn-danger   hero_button1" >Click Me</button>
+            <!-- <button class="btn btn-danger   hero_button1" >Click Me</button> -->
+            <div id="hero_button1">
+
+
+            <div class="hero_button1" >
+              <div ></div>
+
+
+            </div>
+          </div>
+
           </div>
 
         </div>
@@ -1216,7 +1226,7 @@
  <script src="/assets/JS/main.js"></script>
 
  <script>
-   let heroButton = document.querySelector(".hero_button1");
+   let heroButton = document.querySelector("#hero_button1");
 let heroImageArea = document.querySelector(".hero_img_area");
 let heroImage1 = document.querySelector(".hero_img1");
 let heroImage2 = document.querySelector(".hero_img2");
@@ -1224,6 +1234,7 @@ let heroImage3 = document.querySelector(".hero_img3");
 
 heroButton.addEventListener("click",(e)=>{
   heroImageArea.classList.toggle("changeImageActive");
+  heroButton.classList.toggle("toggleSwitchActive");
 
 })
 
@@ -1257,9 +1268,9 @@ gsap.timeline({
 
   }
 })
-.from(".hero_img2",{duration:4,x:innerWidth+1 , ease:
+.from(".hero_img2",{duration:7,x:innerWidth+1 , ease:
 "power2",   })
-.to(".hero_img2",{duration:4,x:innerWidth+1,ease:
+.to(".hero_img2",{duration:7,x:innerWidth+1,ease:
   "linear" ,     });
 
 gsap.timeline({
@@ -1325,6 +1336,7 @@ gsap.timeline({
       toggleActions:"restart reverse none none",
       scrub:true,
 
+
     }
   })
   .from(".features_title",{duration:2,x:20,opacity:0   })
@@ -1347,28 +1359,13 @@ gsap.timeline({
       scrub:true,
       pin:true,
 
+
     }
   })
-  // .from(".fitems1",{duration:2,y:50,opacity:0  })
-  // .from(".fitems2",{duration:2,y:50,opacity:0  })
-  // .from(".fitems3",{duration:2,y:50,opacity:0  })
-  // .from(".fitems4",{duration:2,y:50,opacity:0  })
-  // .from(".fitems5",{duration:2,y:50,opacity:0  })
+
   .from(".features_iteam_area",{duration:1,y:50,opacity:0,stagger:0.8, ease:"linear"    });
 
-  // Video Features Section
-  // gsap.timeline({
-  //   scrollTrigger:{
-  //     trigger:".video_features_wrapper",
-  //     toggleActions:"restart reverse none none",
-  //     scrub:true,
-  //     // start:"top 80%",
-  //     // pin:true,
-  //     markers:true,
 
-  //   }
-  // })
-  // .from(".video_features_wrapper",{duration:2,x:"center",width:500,height:500 ,stagger:0.8, ease:"linear"    });
 
   // Expertise Section
 
@@ -1378,6 +1375,7 @@ gsap.timeline({
       toggleActions:"restart reverse none none",
       scrub:true,
       pin:true,
+
 
     }
   })
@@ -1393,6 +1391,8 @@ gsap.timeline({
       toggleActions:"restart reverse none none",
       scrub:true,
       pin:true,
+      
+
 
     }
   })

@@ -835,6 +835,36 @@ button:hover {
   }
 }
 
+.hero_button1{
+  width: 5rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -2rem;
+  background-color: $blue_color;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  transition: all 1s  ;
+  -webkit-transition: all 1s  ;
+  -moz-transition: all 1s  ;
+  -ms-transition: all 1s  ;
+  -o-transition: all 1s  ;
+    div
+{
+    width: 2.5rem;
+    height: 1.8rem;
+
+    background-color: $white_color;
+  }
+}
+.toggleSwitchActive .hero_button1{
+  justify-content: flex-end;
+}
+
+
+
 /* =============  Archive Section  ============= */
 .archive_section {
   background-image: url("assets/Images/office-583841_1920.jpg");
